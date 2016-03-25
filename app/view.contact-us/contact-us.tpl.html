@@ -1,0 +1,139 @@
+<div id="view-contact-us">
+    
+
+    <div class="row">
+        
+        <div class="col-sm-8">
+            
+            <div class="panel panel-primary">
+                
+                <div class="panel-heading">
+                    Send a message
+                </div>
+                                
+                <form class="panel-body" name="form" novalidate ng-submit="contactUsCtrl.submit()">
+
+                    <div class="row">
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email"
+                                       name="email"
+                                       type="email" 
+                                       class="form-control" 
+                                       placeholder="john.doe@domain.com"
+                                       ng-model="contactUsCtrl.dataObject.email"
+                                       ng-minlength="5"
+                                       maxlength="50"
+                                       required />
+                                <div ng-show="form.email.$touched" ng-messages="form.email.$error" style="color:red" role="alert">
+                                    <div class="error-message" ng-message="required">Required</div>
+                                    <div class="error-message" ng-message="minlength">Minimum of 5 characters</div>
+                                    <div class="error-message" ng-message="email">Must be valid email</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input id="first-name" 
+                                       name="first-name"
+                                       type="text" 
+                                       class="form-control" 
+                                       placeholder="John"
+                                       ng-model="contactUsCtrl.dataObject.firstName"
+                                       ng-minlength="2"
+                                       maxlength="25"
+                                       required />
+                                <div ng-show="form['first-name'].$touched" ng-messages="form['first-name'].$error" style="color:red" role="alert">
+                                    <div class="error-message" ng-message="required">Required</div>
+                                    <div class="error-message" ng-message="minlength">Minimum of 2 characters</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input id="last-name"
+                                       name="last-name"
+                                       type="text" 
+                                       class="form-control" 
+                                       placeholder="Doe"
+                                       ng-model="contactUsCtrl.dataObject.lastName"
+                                       ng-minlength="2"
+                                       maxlength="25"
+                                       required />
+                                <div ng-show="form['last-name'].$touched" ng-messages="form['last-name'].$error" style="color:red" role="alert">
+                                    <div class="error-message" ng-message="required">Required</div>
+                                    <div class="error-message" ng-message="minlength">Minimum of 2 characters</div>
+                                </div>                            
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="comments">Comments</label>
+                                <textarea id="comments"
+                                          name="comments"
+                                          rows="5" 
+                                          class="form-control" 
+                                          placeholder="Provide your comments here"
+                                          ng-model="contactUsCtrl.dataObject.comments"
+                                          maxlength="1000"
+                                          required />
+                                <div ng-show="form['comments'].$touched" ng-messages="form['comments'].$error" style="color:red" role="alert">
+                                    <div class="error-message" ng-message="required">Required</div>
+                                </div>                              
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="form-group">
+                        <input class="btn btn-primary pull-right" 
+                               type="submit" 
+                               value="Submit"
+                               ng-disabled="form.$invalid">
+                        </input>
+                    </div>
+
+                    <div class="clearfix"></div>                
+
+                </form>
+
+            </div>
+            
+        </div>
+    
+        <div class="col-xs-4 hidden-xs">
+                    
+            <h2>Contact Details</h2>
+
+            <p>
+                <span style="display:block">3481 Melrose Place</span>
+                <span style="display:block">Beverly Hills, CA 90210</span>
+            </p>
+
+            <p>
+                <span style="display:block"><i class="glyphicon glyphicon-phone-alt"/> (252) 248-4365</span>                    
+            </p>
+
+            <p>
+                <span style="display:block"><i class="glyphicon glyphicon-envelope"/> johnny.ezzell@yahoo.com</span>                    
+            </p>            
+
+            <p>
+                <span style="display:block"><i class="glyphicon glyphicon-time"/> Monday - Sunday: 9:00am to 6:00pm </span>                    
+            </p>                            
+
+        </div>
+        
+    </div>    
+    
+</div>
+    

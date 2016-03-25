@@ -1,0 +1,28 @@
+#directive-main-navigation {
+    
+    &.navbar {
+        &.navbar-default {
+            background-color:orange;
+            text-shadow: 0 0 5px #262626;
+            
+            .navbar-brand {
+                color: white;
+            }
+            
+            .navbar-nav {
+                
+                & > .active {
+                    & > a {
+                        background-color: #b77600;  
+                    }
+                }
+                
+                a {              
+                    color: white;
+                }
+            }
+            
+        }
+    }
+
+}
